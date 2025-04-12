@@ -1,5 +1,10 @@
 from mem0 import MemoryClient
-client = MemoryClient(api_key="m0-TDAW42orvuH79FsPDGH2UTRTiQz7jlD7StvAQ3Sd")
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+client = MemoryClient(api_key=os.environ["MEM0_API_KEY"])
 
 
 messages = [
